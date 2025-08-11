@@ -1,0 +1,284 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNBZsdJalsy3cwMcxBKNdJe",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Harshakotha31/ADE-Chat-Bot/blob/main/image%20to%20text\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 14,
+      "metadata": {
+        "id": "IA8wHEzcs2Eu"
+      },
+      "outputs": [],
+      "source": [
+        "import pytesseract"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "d8EseJyftfo0"
+      },
+      "execution_count": 14,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from PIL import Image\n",
+        "import pytesseract\n",
+        "from transformers import pipeline\n",
+        "image_path=\"/content/R.jpg\"\n",
+        "image=Image.open(image_path)"
+      ],
+      "metadata": {
+        "id": "G8ayVQhdtyNk"
+      },
+      "execution_count": 15,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "extracted_text=pytesseract.image_to_string(image).strip()\n",
+        "if not extracted_text:\n",
+        "  print(\"No text found in the image\")\n",
+        "else:\n",
+        "  print(extracted_text)\n",
+        ""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OWiRb_aAy_Wy",
+        "outputId": "d51f92de-c008-44ca-8b7d-6680abf396de"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "— AND SEVEN YEARS AGO OUR FATHERS BROUGHT FORTH ON THIS CONTINENT, A NEW NATION, CONG\n",
+            "\\GREAT CIVIL WAR, TESTING WHETHER THAT NATION, OR ANY NATION SO CONCEIVED AND SQ.\n",
+            ")F THAT FIELD, AS AFINAL BESTING PLAGE FOR THOSE WHO HERE GAVE THEIR LY)\n",
+            "\n",
+            "  \n",
+            "   \n",
+            " \n",
+            "  \n",
+            " \n",
+            "   \n",
+            " \n",
+            " \n",
+            " \n",
+            " \n",
+            "\n",
+            "   \n",
+            " \n",
+            " \n",
+            "       \n",
+            "\n",
+            ", DEDICATE -- WE ©“ i \"b) NOT HALLOW — THIS GRO, —_\n",
+            "\n",
+            "41E WORLD WILL jf (AT WE SAY HEBF A A\n",
+            "\n",
+            "‘¥Y WHO FOUGH' \\ ED. ITIS B\n",
+            "\n",
+            "LTO THAT CAU FASURE ALG] == &\n",
+            "\n",
+            "OF FREDO D BY THES fh I\n",
+            "\n",
+            "sc KNEW NATIC 4 Gfrotre Aw i r] a]\n",
+            "\n",
+            "EIVED AND 5} = MET ONAGREY e. Ng AW\n",
+            "YEIR LIVES THER FITTING ANS Me SIL NG _ NIN\n",
+            "3ROUND. 1 9, RUGGLED HERE, f OWreo'\n",
+            "\n",
+            "      \n",
+            " \n",
+            "\n",
+            "IAT WE SAY HERIQ.BUT IT CAN Na ORGET WHAIS E. ITIS FOR US THE LY QQ) ZER, TOE™\n",
+            "JANCED. IT IS RATS” FOR US TO BE HERE DEDICATE RA SREAT TASK REMAINING BEFQ - THAT '\n",
+            "ILL MEASURE ffi JOTION — THAT WE HERE HIGHLY RESOLVE THAT THESE DEAD SHALL NO’ \\ IN VAIN -- THAT THIS NAWURBUNDER G\n",
+            "\n",
+            "PLE, FOR THE PEOPLE, SHALL NOT PERISH FROM THE EARTH FOUR SCCR ! YEARS AGO OUR FATHJS BROUGH\n",
+            "TATED TO THAM (Co osiTION THAT ALL MEN ARE CREATED EQUAL. NOW WE ARE ENGAGED | \\ civil BSTINGY ETHER THAT\n",
+            "LO, NWP RESTING PLACE FOF\n",
+            "\n",
+            "      \n",
+            "\n",
+            "     \n",
+            "     \n",
+            "  \n",
+            "  \n",
+            "  \n",
+            "\n",
+            "     \n",
+            "\n",
+            "   \n",
+            " \n",
+            "\n",
+            "  \n",
+            "\n",
+            " \n",
+            "\n",
+            "    \n",
+            "\n",
+            " \n",
+            "  \n",
+            "      \n",
+            "     \n",
+            "  \n",
+            "      \n",
+            "  \n",
+            "  \n",
+            "      \n",
+            "\n",
+            "      \n",
+            " \n",
+            "\n",
+            " \n",
+            "\n",
+            "RE MET ON ‘\\T BATTLE-FIELD OF THAT WAR. WE HAVE COME TO DEDICATE A PORTION’\n",
+            "ER FITTIN ROPER THAT WE SHOULD DO THIS, BUT, IN ALARGER SENSE, WE CAN NOT WE CAN NOT CONSECRATE -- WE A)\n",
+            "ED HERE JONSECRATED IT, FAR ABOVE OUR POOR POWER TO ADD OR DETRACT. TH i LL LITTLE NOTE, NOR LONG REME?\n",
+            "“OR US TH\\[L BING, RATHER, TO BE DEDICATED HERE TO THE UNFINISHED WORK WHICH THEp4 Wf EOUGHT HERE HAVE THUS FAR SO.N\n",
+            "AINING BEF fag JS px THAT FROM THESE HONORED DEAD WE TAKE INCREASED DEVOTION T, f\\ RUSE FOR WHICH THEY Gave 9 IR\n",
+            "XD SHALL NC PIED IN VAIN ~ THAT THIS NATION, UNDER GOD, SHALL HAVE A NEW BI EDOM ~ AN THAT GOVERNMES)\n",
+            "H.FOUR SC: EVEN YEARS AGO OUR FATHERS BROUGHT FORTH ON THIS CONTIN, Jaggi NATION, CONCEIVED IN LIPG\n",
+            "ENGAGED |. JAAINACIVIL WAR, TESTING WHETHER THAT NATION, OR ANY NATION SO i ID SO DEDICATED, CA '\n",
+            "PORTIONS [LJ JRELO, AS A FINAL RESTING PLACE FQR THOSE WHO HERE GAVE THAT NATION MQW\n",
+            "E CAN NOT fil AAU) WE CAN NOT CONSECRATE — \"4 CAN NOT HALLO Thy “FN TPN JN IAB KE MEN, Livin’\n",
+            "TRACT. THEM L LITTLE NOTE, NOR LONG HA JEMBER Wh = i AY ScoRGET vg\n",
+            "“MICH THEY ERE HAVE THUS FAR, BLY At Me EDI\n",
+            "\n",
+            "“OTION TO\n",
+            "SIRTH OF\n",
+            "7 Ne\n",
+            "\n",
+            " \n",
+            "\n",
+            "  \n",
+            " \n",
+            "\n",
+            "REMA\n",
+            "OR WHICH THEY Gi ye Last FU) DD OTLOs.. TO\n",
+            "ND THAT GOVERNIS fig OF THE PEOPLE, B= QJ ON\n",
+            "3 AND DEDICATED TO TF pm N\n",
+            "\\ ENDURE. WE ARE MET OWA G)\n",
+            "S y IT IS ALTOGETHER FITTING ARQD AV] =\n",
+            "e FAND DEAD, WHO STRUGGLED HERE, HI 5\n",
+            "Y D1 HERE. IT IS FOR US THE LIVIN@eKATHE\n",
+            "O\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sentiment_analyzer=pipeline(\"sentiment-analysis\")\n",
+        "sentiment_result=sentiment_analyzer(extracted_text)\n",
+        "print(\"\\nSentiment Analysis Result:\")\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 462
+        },
+        "id": "vSMniFiKxZA0",
+        "outputId": "536327eb-717d-40e4-8235-49c7331df4ad"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "No model was supplied, defaulted to distilbert/distilbert-base-uncased-finetuned-sst-2-english and revision 714eb0f (https://huggingface.co/distilbert/distilbert-base-uncased-finetuned-sst-2-english).\n",
+            "Using a pipeline without specifying a model name and revision in production is not recommended.\n",
+            "Device set to use cpu\n",
+            "Token indices sequence length is longer than the specified maximum sequence length for this model (774 > 512). Running this sequence through the model will result in indexing errors\n"
+          ]
+        },
+        {
+          "output_type": "error",
+          "ename": "RuntimeError",
+          "evalue": "The size of tensor a (774) must match the size of tensor b (512) at non-singleton dimension 1",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mRuntimeError\u001b[0m                              Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-3269142488.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0msentiment_analyzer\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mpipeline\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"sentiment-analysis\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0msentiment_result\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0msentiment_analyzer\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mextracted_text\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      3\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"\\nSentiment Analysis Result:\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.11/dist-packages/transformers/pipelines/text_classification.py\u001b[0m in \u001b[0;36m__call__\u001b[0;34m(self, inputs, **kwargs)\u001b[0m\n\u001b[1;32m    166\u001b[0m         \"\"\"\n\u001b[1;32m    167\u001b[0m         \u001b[0minputs\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0minputs\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 168\u001b[0;31m         \u001b[0mresult\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0msuper\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m__call__\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m*\u001b[0m\u001b[0minputs\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mkwargs\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    169\u001b[0m         \u001b[0;31m# TODO try and retrieve it in a nicer way from _sanitize_parameters.\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    170\u001b[0m         \u001b[0m_legacy\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m\"top_k\"\u001b[0m \u001b[0;32mnot\u001b[0m \u001b[0;32min\u001b[0m \u001b[0mkwargs\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.11/dist-packages/transformers/pipelines/base.py\u001b[0m in \u001b[0;36m__call__\u001b[0;34m(self, inputs, num_workers, batch_size, *args, **kwargs)\u001b[0m\n\u001b[1;32m   1456\u001b[0m             )\n\u001b[1;32m   1457\u001b[0m         \u001b[0;32melse\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1458\u001b[0;31m             \u001b[0;32mreturn\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mrun_single\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0minputs\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mpreprocess_params\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mforward_params\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mpostprocess_params\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1459\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1460\u001b[0m     \u001b[0;32mdef\u001b[0m \u001b[0mrun_multi\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0minputs\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mpreprocess_params\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mforward_params\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mpostprocess_params\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.11/dist-packages/transformers/pipelines/base.py\u001b[0m in \u001b[0;36mrun_single\u001b[0;34m(self, inputs, preprocess_params, forward_params, postprocess_params)\u001b[0m\n\u001b[1;32m   1463\u001b[0m     \u001b[0;32mdef\u001b[0m \u001b[0mrun_single\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0minputs\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mpreprocess_params\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mforward_params\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mpostprocess_params\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1464\u001b[0m         \u001b[0mmodel_inputs\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mpreprocess\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0minputs\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mpreprocess_params\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1465\u001b[0;31m         \u001b[0mmodel_outputs\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mforward\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmodel_inputs\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mforward_params\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1466\u001b[0m         \u001b[0moutputs\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mpostprocess\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmodel_outputs\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mpostprocess_params\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1467\u001b[0m         \u001b[0;32mreturn\u001b[0m \u001b[0moutputs\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.11/dist-packages/transformers/pipelines/base.py\u001b[0m in \u001b[0;36mforward\u001b[0;34m(self, model_inputs, **forward_params)\u001b[0m\n\u001b[1;32m   1363\u001b[0m                 \u001b[0;32mwith\u001b[0m \u001b[0minference_context\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1364\u001b[0m                     \u001b[0mmodel_inputs\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_ensure_tensor_on_device\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmodel_inputs\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mdevice\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mdevice\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1365\u001b[0;31m                     \u001b[0mmodel_outputs\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_forward\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmodel_inputs\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mforward_params\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1366\u001b[0m                     \u001b[0mmodel_outputs\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_ensure_tensor_on_device\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmodel_outputs\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mdevice\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mtorch\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mdevice\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"cpu\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1367\u001b[0m             \u001b[0;32melse\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.11/dist-packages/transformers/pipelines/text_classification.py\u001b[0m in \u001b[0;36m_forward\u001b[0;34m(self, model_inputs)\u001b[0m\n\u001b[1;32m    197\u001b[0m         \u001b[0;32mif\u001b[0m \u001b[0;34m\"use_cache\"\u001b[0m \u001b[0;32min\u001b[0m \u001b[0minspect\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0msignature\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmodel_forward\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mparameters\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    198\u001b[0m             \u001b[0mmodel_inputs\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m\"use_cache\"\u001b[0m\u001b[0;34m]\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;32mFalse\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 199\u001b[0;31m         \u001b[0;32mreturn\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mmodel\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m**\u001b[0m\u001b[0mmodel_inputs\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    200\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    201\u001b[0m     \u001b[0;32mdef\u001b[0m \u001b[0mpostprocess\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mmodel_outputs\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mfunction_to_apply\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;32mNone\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mtop_k\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;36m1\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0m_legacy\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;32mTrue\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py\u001b[0m in \u001b[0;36m_wrapped_call_impl\u001b[0;34m(self, *args, **kwargs)\u001b[0m\n\u001b[1;32m   1737\u001b[0m             \u001b[0;32mreturn\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_compiled_call_impl\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m*\u001b[0m\u001b[0margs\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mkwargs\u001b[0m\u001b[0;34m)\u001b[0m  \u001b[0;31m# type: ignore[misc]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1738\u001b[0m         \u001b[0;32melse\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1739\u001b[0;31m             \u001b[0;32mreturn\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_call_impl\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m*\u001b[0m\u001b[0margs\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mkwargs\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1740\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1741\u001b[0m     \u001b[0;31m# torchrec tests the code consistency with the following code\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py\u001b[0m in \u001b[0;36m_call_impl\u001b[0;34m(self, *args, **kwargs)\u001b[0m\n\u001b[1;32m   1748\u001b[0m                 \u001b[0;32mor\u001b[0m \u001b[0m_global_backward_pre_hooks\u001b[0m \u001b[0;32mor\u001b[0m \u001b[0m_global_backward_hooks\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1749\u001b[0m                 or _global_forward_hooks or _global_forward_pre_hooks):\n\u001b[0;32m-> 1750\u001b[0;31m             \u001b[0;32mreturn\u001b[0m \u001b[0mforward_call\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m*\u001b[0m\u001b[0margs\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mkwargs\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1751\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1752\u001b[0m         \u001b[0mresult\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;32mNone\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.11/dist-packages/transformers/models/distilbert/modeling_distilbert.py\u001b[0m in \u001b[0;36mforward\u001b[0;34m(self, input_ids, attention_mask, head_mask, inputs_embeds, labels, output_attentions, output_hidden_states, return_dict)\u001b[0m\n\u001b[1;32m    915\u001b[0m         \u001b[0mreturn_dict\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mreturn_dict\u001b[0m \u001b[0;32mif\u001b[0m \u001b[0mreturn_dict\u001b[0m \u001b[0;32mis\u001b[0m \u001b[0;32mnot\u001b[0m \u001b[0;32mNone\u001b[0m \u001b[0;32melse\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mconfig\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0muse_return_dict\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    916\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 917\u001b[0;31m         distilbert_output = self.distilbert(\n\u001b[0m\u001b[1;32m    918\u001b[0m             \u001b[0minput_ids\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0minput_ids\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    919\u001b[0m             \u001b[0mattention_mask\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mattention_mask\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py\u001b[0m in \u001b[0;36m_wrapped_call_impl\u001b[0;34m(self, *args, **kwargs)\u001b[0m\n\u001b[1;32m   1737\u001b[0m             \u001b[0;32mreturn\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_compiled_call_impl\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m*\u001b[0m\u001b[0margs\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mkwargs\u001b[0m\u001b[0;34m)\u001b[0m  \u001b[0;31m# type: ignore[misc]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1738\u001b[0m         \u001b[0;32melse\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1739\u001b[0;31m             \u001b[0;32mreturn\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_call_impl\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m*\u001b[0m\u001b[0margs\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mkwargs\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1740\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1741\u001b[0m     \u001b[0;31m# torchrec tests the code consistency with the following code\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py\u001b[0m in \u001b[0;36m_call_impl\u001b[0;34m(self, *args, **kwargs)\u001b[0m\n\u001b[1;32m   1748\u001b[0m                 \u001b[0;32mor\u001b[0m \u001b[0m_global_backward_pre_hooks\u001b[0m \u001b[0;32mor\u001b[0m \u001b[0m_global_backward_hooks\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1749\u001b[0m                 or _global_forward_hooks or _global_forward_pre_hooks):\n\u001b[0;32m-> 1750\u001b[0;31m             \u001b[0;32mreturn\u001b[0m \u001b[0mforward_call\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m*\u001b[0m\u001b[0margs\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mkwargs\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1751\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1752\u001b[0m         \u001b[0mresult\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;32mNone\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.11/dist-packages/transformers/models/distilbert/modeling_distilbert.py\u001b[0m in \u001b[0;36mforward\u001b[0;34m(self, input_ids, attention_mask, head_mask, inputs_embeds, output_attentions, output_hidden_states, return_dict)\u001b[0m\n\u001b[1;32m    721\u001b[0m         \u001b[0mhead_mask\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mget_head_mask\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mhead_mask\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mconfig\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mnum_hidden_layers\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    722\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 723\u001b[0;31m         \u001b[0membeddings\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0membeddings\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0minput_ids\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0minputs_embeds\u001b[0m\u001b[0;34m)\u001b[0m  \u001b[0;31m# (bs, seq_length, dim)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    724\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    725\u001b[0m         \u001b[0;32mif\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_use_flash_attention_2\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py\u001b[0m in \u001b[0;36m_wrapped_call_impl\u001b[0;34m(self, *args, **kwargs)\u001b[0m\n\u001b[1;32m   1737\u001b[0m             \u001b[0;32mreturn\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_compiled_call_impl\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m*\u001b[0m\u001b[0margs\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mkwargs\u001b[0m\u001b[0;34m)\u001b[0m  \u001b[0;31m# type: ignore[misc]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1738\u001b[0m         \u001b[0;32melse\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1739\u001b[0;31m             \u001b[0;32mreturn\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_call_impl\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m*\u001b[0m\u001b[0margs\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mkwargs\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1740\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1741\u001b[0m     \u001b[0;31m# torchrec tests the code consistency with the following code\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py\u001b[0m in \u001b[0;36m_call_impl\u001b[0;34m(self, *args, **kwargs)\u001b[0m\n\u001b[1;32m   1748\u001b[0m                 \u001b[0;32mor\u001b[0m \u001b[0m_global_backward_pre_hooks\u001b[0m \u001b[0;32mor\u001b[0m \u001b[0m_global_backward_hooks\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1749\u001b[0m                 or _global_forward_hooks or _global_forward_pre_hooks):\n\u001b[0;32m-> 1750\u001b[0;31m             \u001b[0;32mreturn\u001b[0m \u001b[0mforward_call\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m*\u001b[0m\u001b[0margs\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mkwargs\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1751\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1752\u001b[0m         \u001b[0mresult\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;32mNone\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.11/dist-packages/transformers/models/distilbert/modeling_distilbert.py\u001b[0m in \u001b[0;36mforward\u001b[0;34m(self, input_ids, input_embeds)\u001b[0m\n\u001b[1;32m    124\u001b[0m         \u001b[0mposition_embeddings\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mposition_embeddings\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mposition_ids\u001b[0m\u001b[0;34m)\u001b[0m  \u001b[0;31m# (bs, max_seq_length, dim)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    125\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 126\u001b[0;31m         \u001b[0membeddings\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0minput_embeds\u001b[0m \u001b[0;34m+\u001b[0m \u001b[0mposition_embeddings\u001b[0m  \u001b[0;31m# (bs, max_seq_length, dim)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    127\u001b[0m         \u001b[0membeddings\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mLayerNorm\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0membeddings\u001b[0m\u001b[0;34m)\u001b[0m  \u001b[0;31m# (bs, max_seq_length, dim)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    128\u001b[0m         \u001b[0membeddings\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mdropout\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0membeddings\u001b[0m\u001b[0;34m)\u001b[0m  \u001b[0;31m# (bs, max_seq_length, dim)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mRuntimeError\u001b[0m: The size of tensor a (774) must match the size of tensor b (512) at non-singleton dimension 1"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n"
+      ],
+      "metadata": {
+        "id": "jXYl_mdaxACu"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "597a9207"
+      },
+      "source": [
+        "sentiment_analyzer = pipeline(\"sentiment-analysis\", model=\"cardiffnlp/twitter-roberta-base-sentiment-latest\")\n",
+        "sentiment_result = sentiment_analyzer(extracted_text)\n",
+        "print(\"\\nSentiment Analysis Result:\")\n",
+        "print(sentiment_result)"
+      ],
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
